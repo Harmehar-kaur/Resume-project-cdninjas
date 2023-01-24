@@ -30,6 +30,7 @@ body{
     color: white;
     text-decoration: none;
 }
+
 .nav-menu li a{
     transition:color 0.5s, border-bottom 0.5s;
 }
@@ -61,3 +62,34 @@ body{
     box-shadow: 0px 0px 6px 4px white;
 }
 
+#about{
+height: auto;
+width: 100%;
+position: relative;
+}
+#my-image{
+    height:12rem;
+    width: 12rem;
+    margin:auto;
+    margin-top: -17vh;
+}
+
+#my-image img{
+    height: 100%;
+    width:100%;
+    border-radius: 50%;
+    border:1px solid white;
+    box-shadow: 0px 0px 6px 4px lightgrey;
+}
+
+#about-content p{
+    margin: 5vh 20vw 5vh 20vw;
+	font-family:sans-serif;
+	color: grey;
+	font-size: 20px;
+	text-align: justify;
+}
+
+#about-content p span{
+    color:#2857a4;
+}
