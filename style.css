@@ -2,6 +2,10 @@ body{
     margin:0px;
 }
 
+.mb75px {
+    margin-bottom: 75px;
+}
+
 .text-center{
     text-align: center;
 }
@@ -15,29 +19,35 @@ body{
     background-attachment: fixed;
 }
 
-.horizontal-list{
+.horizontal-list {
     list-style: none;
     padding-left: 0px;
     margin: 0px;
 }
 
-.horizontal-list li{
+.horizontal-list li {
     display: inline-block;
     margin: 0px 8px 8px 0px;
+    font-weight: 100;
+    font-size: 0.9rem;
 }
 
-.horizontal-list li a{
+.horizontal-list li a {
     color: white;
     text-decoration: none;
 }
 
-.nav-menu li a{
-    transition:color 0.5s, border-bottom 0.5s;
+.nav-menu li a {
+    transition: color 0.5s, border-bottom 4s;
 }
 
-.nav-menu li a:hover{
-    color: gray;
-    border-bottom: 1px solid gray;
+.nav-menu li a:hover {
+    color: lightgrey;
+    border-bottom: 1px solid black;
+}
+
+.text-center {
+    text-align: center;
 }
 
 #My-Name-Container{
@@ -45,21 +55,51 @@ body{
 }
 
 #My-Name{
-    color: white;
     font-size: 3rem;
-    font-weight: 700;
     letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-
 }
 
 .social-list li a i{
     padding: 10px;
-    border-radius: 48%;
+    font-size: 1rem;
+    border-radius: 50%;
 }
 
 .social-list li a i:hover{
-    box-shadow: 0px 0px 6px 4px white;
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+}
+
+.heading {
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.heading span {
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
 }
 
 #about{
@@ -67,6 +107,7 @@ height: auto;
 width: 100%;
 position: relative;
 }
+
 #my-image{
     height:12rem;
     width: 12rem;
@@ -76,20 +117,141 @@ position: relative;
 
 #my-image img{
     height: 100%;
-    width:100%;
+    width: 100%;
     border-radius: 50%;
-    border:1px solid white;
-    box-shadow: 0px 0px 6px 4px lightgrey;
+    border: 3px solid white;
+    box-shadow: 1px 1px 10px 2px lightgrey;
 }
 
-#about-content p{
-    margin: 5vh 20vw 5vh 20vw;
-	font-family:sans-serif;
-	color: grey;
-	font-size: 20px;
-	text-align: justify;
+#about-content{
+    padding: 10px;
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    color: grey;
+    line-height: 28px;
+    font-weight: 100;
+    font-size: 1.1rem;
 }
 
 #about-content p span{
     color:#2857a4;
+    font-weight: 600;
+}
+
+#skillcontent{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-progress {
+    width: 7rem;
+    height: 1.4rem;
+    border-radius: 0.8rem;
+	background-color: darkgrey;
+	box-shadow: 0px 0px 12px 1px black;
+	margin: 30px;
+	position: relative;
+}
+
+.skill-progress span {
+	position: absolute;
+	/* in the javascript file, when the width of the inner div increases, then the text inside 
+    it should not wrap. thats why the position in abolute. and this position is absolute relative 
+    to the skill progress, whose position is relative */
+}
+
+.skill-progress > div {
+    border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name {
+    color: white;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.portfolio-display {
+	width: 100%;
+	height: inherit;
+	/* height:100px;
+    border:2px solid black; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.project {
+	width: 400px;
+	margin: 5px;
+	padding-right:15px;
+	padding-bottom:10px;
+	border-radius: 5px;
+	line-height: 30px;
+}
+
+.front-end
+{
+	text-decoration:none;
+	color:blueviolet;
+}
+.back-end 
+{
+	text-decoration:none;
+	color:red;
+}
+.project-3
+{
+	text-decoration:none;
+	color:green;
+}
+
+.project:nth-child(1)
+{
+	background-color:rgba(98, 0, 255, 0.1)
+}
+.project:nth-child(2)
+{
+	background-color:rgba(255, 0, 0, 0.1)
+}
+.project:nth-child(3){
+	background-color:rgba(0, 128, 21, 0.1)
+}
+
+.mb75px {
+    margin-bottom: 75px;
+}
+
+.blue-bg {
+    background-color: #2857a4;
+}
+
+.brown-bg{
+    background-color: brown;
+}
+
+.grey-bg{
+    background-color: rgb(111, 105, 105);
+}
+.eighty-five {
+    width: 85%;
+    height: inherit;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+}
+
+.fifty{
+    width: 50%;
+    height: inherit;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+}
+
+.seventy{
+    width: 70%;
+    height: inherit;
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
 }
