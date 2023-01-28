@@ -255,3 +255,91 @@ position: relative;
     height: inherit;
     border-radius: 0.8rem 0rem 0rem 0.8rem;
 }
+
+#contact {
+	/* background: linear-gradient(-45deg, red -100%, blue 200%); */
+    background: linear-gradient( #2857a4 , #403066);
+}
+
+.contact-content {
+	width: 85%;
+	height: inherit;
+    color: white;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	padding-bottom: 40px;
+	flex-direction: row;
+}
+
+.contact-block {
+	height: auto;
+	width: 40%;
+	/* background-color: rgba(255, 0, 191, 0.1); */
+	min-width: 170px;
+	margin: 12px;
+}
+
+#contact-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#contact-form div {
+	margin: 5%;
+	width: 67%;
+}
+
+#contact-form div:nth-child(4) {
+	width: auto !important;
+}
+
+#contact-form div input {
+	background-color: rgba(0, 0, 0, 0);
+	border-width: 0px 0px 2px 0px;
+	border-color: white;
+	width: 100%;
+	font-size: 20px;
+	color: white;
+}
+/* send message button */
+
+#send_message {
+	background-color: rgba(0, 0, 0, 0);
+	border: 3px solid white;
+	color: white;
+	border-style: solid;
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	font-family: sans-serif;
+}
+/* second block in contact section */
+
+.contact-block {
+	color: white;
+	font-size: 20px;
+	padding: 40px;
+}
+
+.contact-block div span img {
+	margin-bottom: -9px;
+}
+
+.contact-block div p {
+	text-align: justify;
+	margin-left: 20px;
+	font-family: sans-serif;
+}
+
+#my-info {
+	margin: 30px;
+}
+
+#my-info span:nth-child(2) {
+	margin-left: 20px;
+	font-family: sans-serif;
+}
