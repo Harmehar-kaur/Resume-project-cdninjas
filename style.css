@@ -1,14 +1,10 @@
-body{
-    margin:0px;
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    font-size: 30px;
 }
 
-.mb75px {
-    margin-bottom: 75px;
-}
-
-.text-center{
-    text-align: center;
-}
+/* body header */
 
 #body-header{
     height:65vh;
@@ -18,6 +14,8 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
+
+/* horizontal lists */
 
 .horizontal-list {
     list-style: none;
@@ -49,6 +47,8 @@ body{
 .text-center {
     text-align: center;
 }
+
+/* Name and social Icons */
 
 #My-Name-Container{
     margin-top: 20vh;
@@ -102,6 +102,8 @@ section:nth-child(2n + 1) {
     margin-right: 0.5rem;
 }
 
+/* about */
+
 #about{
 height: auto;
 width: 100%;
@@ -141,45 +143,105 @@ position: relative;
     font-weight: 600;
 }
 
+/* skills */
+
 #skillcontent{
     width: 70%;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .skill-progress {
     width: 7rem;
     height: 1.4rem;
+    margin: 20px;
+    background-color: lightgrey;
     border-radius: 0.8rem;
-	background-color: darkgrey;
-	box-shadow: 0px 0px 12px 1px black;
-	margin: 30px;
-	position: relative;
-}
-
-.skill-progress span {
-	position: absolute;
-	/* in the javascript file, when the width of the inner div increases, then the text inside 
-    it should not wrap. thats why the position in abolute. and this position is absolute relative 
-    to the skill progress, whose position is relative */
-}
-
-.skill-progress > div {
-    border-radius: 20px 0px 0px 20px;
+    overflow: hidden;
+    box-shadow: inset 1px 1px 2px 1px #b9b9b9;
 }
 
 .skill-name {
+    font-size: 15px;
     color: white;
-    font-size: 1rem;
-    margin-left: 10px;
+    padding: 6px 0 10px 20px;
 }
+
+.skill-name span{
+    margin: 0;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    width: 75%;
+    
+
+}
+
+.timeline-box {
+    position: relative;
+    margin: 5px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    
+}
+
+.timeline-box:nth-child(2n) {
+    left: 53%;
+}
+
+.timeline-box:nth-child(2n+1)::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: -13%;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    z-index: 1;
+
+}
+
+
+.timeline-box:nth-child(2n)::after {
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: -9%;
+    border-radius: 50%;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: red;
+    z-index: 1;
+}
+
+.timeline-divider {
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 3px dashed #0096fa6b;
+    top: 10%;
+    left: 50%;
+}
+
+.timeline-traveller {
+    position: sticky;
+    top: 30%;
+    transform: rotate(90deg);
+    z-index: 2;
+}
+
+/* portfolio */
 
 .portfolio-display {
 	width: 100%;
 	height: inherit;
-	/* height:100px;
-    border:2px solid black; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -200,11 +262,13 @@ position: relative;
 	text-decoration:none;
 	color:blueviolet;
 }
+
 .back-end 
 {
 	text-decoration:none;
 	color:red;
 }
+
 .project-3
 {
 	text-decoration:none;
@@ -223,7 +287,7 @@ position: relative;
 	background-color:rgba(0, 128, 21, 0.1)
 }
 
-.mb75px {
+.margin75ms {
     margin-bottom: 75px;
 }
 
@@ -256,11 +320,18 @@ position: relative;
     border-radius: 0.8rem 0rem 0rem 0.8rem;
 }
 
+/* Contact */
+
 #contact {
-	/* background: linear-gradient(-45deg, red -100%, blue 200%); */
     background: linear-gradient( #2857a4 , #403066);
 }
 
+.whiteheading{
+    color: white;
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
 .contact-content {
 	width: 85%;
 	height: inherit;
